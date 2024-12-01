@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3051DDDC2CFBAC2D00ED2B63 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3051DDDB2CFBAC2D00ED2B63 /* LoginView.swift */; };
+		3051DDDF2CFBACD800ED2B63 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3051DDDE2CFBACD800ED2B63 /* LoginViewViewModel.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3051DDC92CFBAC0C00ED2B63 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3051DDDB2CFBAC2D00ED2B63 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3051DDDE2CFBACD800ED2B63 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +39,8 @@
 		3051DDC02CFBAC0C00ED2B63 = {
 			isa = PBXGroup;
 			children = (
+				3051DDDD2CFBACC100ED2B63 /* ViewModels */,
+				3051DDDA2CFBAC1500ED2B63 /* Views */,
 				3051DDCB2CFBAC0C00ED2B63 /* InstagramClone */,
 				3051DDCA2CFBAC0C00ED2B63 /* Products */,
 			);
@@ -43,6 +52,22 @@
 				3051DDC92CFBAC0C00ED2B63 /* InstagramClone.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3051DDDA2CFBAC1500ED2B63 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3051DDDB2CFBAC2D00ED2B63 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3051DDDD2CFBACC100ED2B63 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3051DDDE2CFBACD800ED2B63 /* LoginViewViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3051DDDC2CFBAC2D00ED2B63 /* LoginView.swift in Sources */,
+				3051DDDF2CFBACD800ED2B63 /* LoginViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
