@@ -8,34 +8,29 @@
 import SwiftUI
 
 
-
 struct LoginView: View {
     @StateObject private var viewModel = LoginViewViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 VStack(spacing: 20) {
-                    // Logo
                     Image("instagram-logo")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200)
                         .padding(.top, 100)
                     
-                    // Email field
                     TextField("Email", text: $viewModel.email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .padding(.horizontal)
                     
-                    // Password field
                     SecureField("Şifre", text: $viewModel.password)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal)
                     
-                    // Login button
                     Button(action: {
                         viewModel.login()
                     }) {
@@ -54,19 +49,18 @@ struct LoginView: View {
                     
                     Spacer()
                     
-                    // Şifremi Unuttum & Kayıt Ol
                     VStack(spacing: 15) {
                         Button("Şifreni mi unuttun?") {
-                            // Şifre sıfırlama işlemi
+                            
                         }
                         .foregroundColor(.blue)
                         
                         HStack {
                             Text("Hesabın yok mu?")
-                            Button("Kayıt Ol") {
-                                // Kayıt sayfasına yönlendirme
+                            NavigationLink(destination: RegisterView()) {
+                                Text("Kayıt Ol")
+                                    .foregroundColor(.blue)
                             }
-                            .foregroundColor(.blue)
                         }
                     }
                     .padding(.bottom, 20)
@@ -87,28 +81,12 @@ struct LoginView: View {
                     dismissButton: .default(Text("Tamam"))
                 )
             }
-            .navigationBarHidden(true)
-        }
-        .fullScreenCover(isPresented: $viewModel.isLoggedIn) {
-            // Ana sayfaya yönlendirme
-            MainView()
         }
     }
 }
 
-// MainView.swift (Örnek ana sayfa)
-struct MainView: View {
-    var body: some View {
-        Text("Ana Sayfa")
-    }
-}
 
-// Preview
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
+
 
 #Preview {
     LoginView()
