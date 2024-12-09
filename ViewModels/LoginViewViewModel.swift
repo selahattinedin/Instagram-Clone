@@ -37,7 +37,7 @@ class LoginViewViewModel: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
             guard let self = self else { return }
             
-            // Test için basit kontrol
+             
             if self.email == "test@test.com" && self.password == "123456" {
                 self.isLoggedIn = true
             } else {
