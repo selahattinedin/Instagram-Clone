@@ -10,7 +10,7 @@ import SwiftUI
 struct FeedCell: View {
     var body: some View {
         VStack{
-            //profil fotoğrafı ve kullanıcı adı
+            //profil fotoğrafı ve kullanıcı adı sol tarafta
             HStack{
                 Image("Ben")
                     .resizable()
@@ -29,7 +29,7 @@ struct FeedCell: View {
                 .scaledToFill()
                 .frame(height: 300)
                 .clipShape(Rectangle())
-            //action butonları
+            //action butonları burada gösterilecek
             HStack{
                 Button{}label: {
                     Image(systemName: "heart")
@@ -48,14 +48,14 @@ struct FeedCell: View {
             .padding(.leading, 8)
             .padding(.top, 4)
             .foregroundStyle(Color("buttonTextColor"))
-            //beğeni sayısı ve like
+            //beğeni sayısı ve like gösterimi burada olacak
             Text("300 likes")
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 10)
                 .padding(.top,1)
-            //açıklama kısmı
+            //açıklama kısmı burada olacak 
             HStack{
                 Text("Selahattin Edin")
                     .fontWeight(.semibold) +
